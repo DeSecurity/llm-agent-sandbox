@@ -47,6 +47,10 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        terminal: "hsl(var(--terminal))",
+        "terminal-dim": "hsl(var(--terminal-dim))",
+        warning: "hsl(var(--warning))",
+        info: "hsl(var(--info))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -57,6 +61,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      fontFamily: {
+        mono: ["JetBrains Mono", "monospace"],
+        sans: ["Inter", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
