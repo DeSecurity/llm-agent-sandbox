@@ -41,6 +41,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             className={`text-xs px-2 py-1 rounded font-mono ${
               classification === "llm-agent"
                 ? "bg-destructive/20 text-destructive border border-destructive/30"
+                : classification === "mobile"
+                ? "bg-info/15 text-info border border-info/30"
                 : "bg-primary/15 text-primary border border-primary/30"
             }`}
           >

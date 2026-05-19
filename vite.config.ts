@@ -5,6 +5,9 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // GitHub Pages serves this project under /llm-agent-sandbox/.
+  // Use a relative base in dev (Lovable preview) and the repo path in production builds.
+  base: mode === "production" ? "/llm-agent-sandbox/" : "/",
   server: {
     host: "::",
     port: 8080,
