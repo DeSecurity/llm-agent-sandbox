@@ -374,13 +374,14 @@ export function renderStaticStyles() {
 
 export function renderStaticFallback(page: StaticPage, base = "/") {
   const prefix = base.endsWith("/") ? base.slice(0, -1) : base;
+  const body = page.body.replace(/href="\/stage\//g, `href="${prefix}/stage/`);
   return `
     ${renderStaticStyles()}
     <div class="static-fallback" data-static-route="/${page.route}">
       <nav aria-label="Sandbox navigation">
         <a href="${prefix}/">Dashboard</a> · <a href="${prefix}/logs">Logs</a>
       </nav>
-      ${page.body.replaceAll('href="/stage/', `href="${prefix}/stage/`)}
+      ${body}
     </div>
   `;
 }
